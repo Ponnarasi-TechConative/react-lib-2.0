@@ -22,11 +22,9 @@ const Info = ({ getComponent, specSelectors }) => {
 
   const Markdown = getComponent("Markdown", true)
   const Link = getComponent("Link")
-  const VersionStamp = getComponent("VersionStamp")
   const InfoUrl = getComponent("InfoUrl")
   const InfoBasePath = getComponent("InfoBasePath")
   const License = getComponent("License", true)
-  const Contact = getComponent("Contact", true)
   const JsonSchemaDialect = getComponent("JsonSchemaDialect", true)
 
   return (
@@ -34,7 +32,6 @@ const Info = ({ getComponent, specSelectors }) => {
       <hgroup className="main">
         <h2 className="title">
           {title}
-          {version && <VersionStamp version={version}></VersionStamp>}
         </h2>
 
         {(host || basePath) && <InfoBasePath host={host} basePath={basePath} />}

@@ -11,7 +11,6 @@ const safeRenderPlugin = ({componentList = [], fullOverride = false} = {}) => ({
     "InfoContainer",
     "OperationContainer",
     "parameters",
-    "responses",
     "Models",
     "ModelWrapper",
   ]

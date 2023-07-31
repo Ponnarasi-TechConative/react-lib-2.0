@@ -92,10 +92,8 @@ export default class Operation extends PureComponent {
     let isShownKey = ["operations", tag, operationId]
     let extensions = getExtensions(operation)
 
-    const Responses = getComponent("responses")
     const Parameters = getComponent( "parameters" )
     const Execute = getComponent( "execute" )
-    const Clear = getComponent( "clear" )
     const Collapse = getComponent( "Collapse" )
     const Markdown = getComponent("Markdown", true)
     const Schemes = getComponent( "schemes" )
@@ -217,35 +215,12 @@ export default class Operation extends PureComponent {
                     disabled={executeInProgress}/>
               }
 
-              { (!tryItOutEnabled || !response || !allowTryItOut) ? null :
-                  <Clear
-                    specActions={ specActions }
-                    path={ path }
-                    method={ method }/>
-              }
+             
             </div>
 
             {executeInProgress ? <div className="loading-container"><div className="loading"></div></div> : null}
 
-              { !responses ? null :
-                  <Responses
-                    responses={ responses }
-                    request={ request }
-                    tryItOutResponse={ response }
-                    getComponent={ getComponent }
-                    getConfigs={ getConfigs }
-                    specSelectors={ specSelectors }
-                    oas3Actions={oas3Actions}
-                    oas3Selectors={oas3Selectors}
-                    specActions={ specActions }
-                    produces={specSelectors.producesOptionsFor([path, method]) }
-                    producesValue={ specSelectors.currentProducesFor([path, method]) }
-                    specPath={specPath.push("responses")}
-                    path={ path }
-                    method={ method }
-                    displayRequestDuration={ displayRequestDuration }
-                    fn={fn} />
-              }
+              
 
               { !showExtensions || !extensions.size ? null :
                 <OperationExt extensions={ extensions } getComponent={ getComponent } />

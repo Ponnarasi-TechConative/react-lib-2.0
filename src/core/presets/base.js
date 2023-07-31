@@ -33,7 +33,6 @@ import Example from "core/components/example"
 import ExamplesSelect from "core/components/examples-select"
 import ExamplesSelectValueRetainer from "core/components/examples-select-value-retainer"
 import Oauth2 from "core/components/auth/oauth2"
-import Clear from "core/components/clear"
 import LiveResponse from "core/components/live-response"
 import OnlineValidatorBadge from "core/components/online-validator-badge"
 import Operations from "core/components/operations"
@@ -45,11 +44,6 @@ import OperationSummaryPath from "core/components/operation-summary-path"
 import OperationExt from "core/components/operation-extensions"
 import OperationExtRow from "core/components/operation-extension-row"
 import HighlightCode from "core/components/highlight-code"
-import Responses from "core/components/responses"
-import Response from "core/components/response"
-import ResponseExtension from "core/components/response-extension"
-import ResponseBody from "core/components/response-body"
-import { Parameters } from "core/components/parameters"
 import ParameterExt from "core/components/parameter-extension"
 import ParameterIncludeEmpty from "core/components/parameter-include-empty"
 import ParameterRow from "core/components/parameter-row"
@@ -60,14 +54,11 @@ import Overview from "core/components/overview"
 import InitializedInput from "core/components/initialized-input"
 import Info, { InfoUrl, InfoBasePath } from "core/components/info"
 import InfoContainer from "core/containers/info"
-import Contact from "core/components/contact"
 import License from "core/components/license"
 import JumpToPath from "core/components/jump-to-path"
-import CopyToClipboardBtn from "core/components/copy-to-clipboard-btn"
 import Footer from "core/components/footer"
 import ParamBody from "core/components/param-body"
 import Curl from "core/components/curl"
-import Schemes from "core/components/schemes"
 import ModelCollapse from "core/components/model-collapse"
 import ModelExample from "core/components/model-example"
 import ModelWrapper from "core/components/model-wrapper"
@@ -75,11 +66,8 @@ import Model from "core/components/model"
 import Models from "core/components/models"
 import EnumModel from "core/components/enum-model"
 import ObjectModel from "core/components/object-model"
-import ArrayModel from "core/components/array-model"
 import PrimitiveModel from "core/components/primitive-model"
 import Property from "core/components/property"
-import TryItOutButton from "core/components/try-it-out-button"
-import VersionStamp from "core/components/version-stamp"
 import DeepLink from "core/components/deep-link"
 import Markdown from "core/components/providers/markdown"
 import BaseLayout from "core/components/layouts/base"
@@ -99,17 +87,14 @@ export default function () {
       oauth2: Oauth2,
       apiKeyAuth: ApiKeyAuth,
       basicAuth: BasicAuth,
-      clear: Clear,
       liveResponse: LiveResponse,
       InitializedInput,
       info: Info,
       InfoContainer,
       InfoUrl,
       InfoBasePath,
-      Contact,
       License,
       JumpToPath,
-      CopyToClipboardBtn,
       onlineValidatorBadge: OnlineValidatorBadge,
       operations: Operations,
       operation: Operation,
@@ -117,11 +102,6 @@ export default function () {
       OperationSummaryMethod,
       OperationSummaryPath,
       highlightCode: HighlightCode,
-      responses: Responses,
-      response: Response,
-      ResponseExtension: ResponseExtension,
-      responseBody: ResponseBody,
-      parameters: Parameters,
       parameterRow: ParameterRow,
       execute: Execute,
       headers: Headers,
@@ -130,7 +110,6 @@ export default function () {
       footer: Footer,
       ParamBody: ParamBody,
       curl: Curl,
-      schemes: Schemes,
       modelExample: ModelExample,
       ModelWrapper,
       ModelCollapse,
@@ -138,13 +117,10 @@ export default function () {
       Models,
       EnumModel,
       ObjectModel,
-      ArrayModel,
       PrimitiveModel,
       Property,
-      TryItOutButton,
       Markdown,
       BaseLayout,
-      VersionStamp,
       OperationExt,
       OperationExtRow,
       ParameterExt,

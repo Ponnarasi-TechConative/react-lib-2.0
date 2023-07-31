@@ -13,7 +13,6 @@ import ContactWrapper from "./wrap-components/contact"
 import InfoWrapper from "./wrap-components/info"
 import ModelWrapper from "./wrap-components/model"
 import ModelsWrapper from "./wrap-components/models"
-import VersionStampWrapper from "./wrap-components/version-stamp"
 import {
   isOAS31 as isOAS31Fn,
   createOnlyOAS31Selector as createOnlyOAS31SelectorFn,
@@ -87,7 +86,6 @@ const OAS31Plugin = ({ fn }) => {
       InfoContainer: InfoWrapper,
       License: LicenseWrapper,
       Contact: ContactWrapper,
-      VersionStamp: VersionStampWrapper,
       Model: ModelWrapper,
       Models: ModelsWrapper,
       JSONSchema202012KeywordDescription:

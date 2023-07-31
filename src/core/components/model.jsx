@@ -49,7 +49,6 @@ export default class Model extends ImmutablePureComponent {
     let { getComponent, getConfigs, specSelectors, schema, required, name, isRef, specPath, displayName,
       includeReadOnly, includeWriteOnly} = this.props
     const ObjectModel = getComponent("ObjectModel")
-    const ArrayModel = getComponent("ArrayModel")
     const PrimitiveModel = getComponent("PrimitiveModel")
     let type = "object"
     let $$ref = schema && schema.get("$$ref")
@@ -87,15 +86,7 @@ export default class Model extends ImmutablePureComponent {
           includeReadOnly = {includeReadOnly}
           includeWriteOnly = {includeWriteOnly}/>
       case "array":
-        return <ArrayModel
-          className="array" { ...this.props }
-          getConfigs={ getConfigs }
-          schema={ schema }
-          name={ name }
-          deprecated={deprecated}
-          required={ required }
-          includeReadOnly = {includeReadOnly}
-          includeWriteOnly = {includeWriteOnly}/>
+        return <></>
       case "string":
       case "number":
       case "integer":

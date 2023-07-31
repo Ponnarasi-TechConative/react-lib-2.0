@@ -276,10 +276,6 @@ export const taggedOperations = (state) => ({ getConfigs }) => {
     })
 }
 
-export const responses = createSelector(
-  state,
-  state => state.get( "responses", Map() )
-)
 
 export const requests = createSelector(
     state,

@@ -88,18 +88,15 @@ class Info extends React.Component {
 
     const Markdown = getComponent("Markdown", true)
     const Link = getComponent("Link")
-    const VersionStamp = getComponent("VersionStamp")
     const InfoUrl = getComponent("InfoUrl")
     const InfoBasePath = getComponent("InfoBasePath")
     const License = getComponent("License")
-    const Contact = getComponent("Contact")
 
     return (
       <div className="info">
         <hgroup className="main">
           <h2 className="title">
             {title}
-            {version && <VersionStamp version={version}></VersionStamp>}
           </h2>
           {host || basePath ? (
             <InfoBasePath host={host} basePath={basePath} />
@@ -119,14 +116,7 @@ class Info extends React.Component {
           </div>
         )}
 
-        {contactData?.size > 0 && (
-          <Contact
-            getComponent={getComponent}
-            data={contactData}
-            selectedServer={selectedServer}
-            url={url}
-          />
-        )}
+       
         {licenseData?.size > 0 && (
           <License
             getComponent={getComponent}
