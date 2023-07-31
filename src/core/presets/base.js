@@ -42,14 +42,7 @@ import License from "core/components/license"
 import JumpToPath from "core/components/jump-to-path"
 import Footer from "core/components/footer"
 import Curl from "core/components/curl"
-import ModelCollapse from "core/components/model-collapse"
-import ModelExample from "core/components/model-example"
-import ModelWrapper from "core/components/model-wrapper"
-import Model from "core/components/model"
-import Models from "core/components/models"
-import EnumModel from "core/components/enum-model"
 import DeepLink from "core/components/deep-link"
-import Markdown from "core/components/providers/markdown"
 import BaseLayout from "core/components/layouts/base"
 import * as LayoutUtils from "core/components/layout-utils"
 import * as JsonSchemaComponents from "core/json-schema-components"
@@ -81,13 +74,6 @@ export default function () {
       contentType: ContentType,
       footer: Footer,
       curl: Curl,
-      modelExample: ModelExample,
-      ModelWrapper,
-      ModelCollapse,
-      Model,
-      Models,
-      EnumModel,
-      Markdown,
       BaseLayout,
       DeepLink,
       Example,

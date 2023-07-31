@@ -51,7 +51,6 @@ export default class HttpAuth extends React.Component {
     const Row = getComponent("Row")
     const Col = getComponent("Col")
     const AuthError = getComponent("authError")
-    const Markdown = getComponent("Markdown", true)
     const JumpToPath = getComponent("JumpToPath", true)
 
     const scheme = (schema.get("scheme") || "").toLowerCase()
@@ -67,9 +66,7 @@ export default class HttpAuth extends React.Component {
             <JumpToPath path={[ "securityDefinitions", name ]} />
           </h4>
         { username && <h6>Authorized</h6> }
-        <Row>
-          <Markdown source={ schema.get("description") } />
-        </Row>
+      
         <Row>
           <label>Username:</label>
           {
@@ -106,9 +103,7 @@ export default class HttpAuth extends React.Component {
               <JumpToPath path={[ "securityDefinitions", name ]} />
             </h4>
             { value && <h6>Authorized</h6>}
-            <Row>
-              <Markdown source={ schema.get("description") } />
-            </Row>
+          
             <Row>
               <label>Value:</label>
               {

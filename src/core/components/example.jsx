@@ -10,7 +10,6 @@ import { stringify } from "core/utils"
 export default function Example(props) {
   const { example, showValue, getComponent, getConfigs } = props
 
-  const Markdown = getComponent("Markdown", true)
   const HighlightCode = getComponent("highlightCode")
 
   if(!example) return null
@@ -21,7 +20,6 @@ export default function Example(props) {
         <section className="example__section">
           <div className="example__section-header">Example Description</div>
           <p>
-            <Markdown source={example.get("description")} />
           </p>
         </section>
       ) : null}

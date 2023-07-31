@@ -11,8 +11,6 @@ const safeRenderPlugin = ({componentList = [], fullOverride = false} = {}) => ({
     "InfoContainer",
     "OperationContainer",
     "parameters",
-    "Models",
-    "ModelWrapper",
   ]
   const mergedComponentList = fullOverride ? componentList : [...defaultComponentList, ...componentList]
   const wrapFactory = (Original, { fn }) => fn.withErrorBoundary(Original)

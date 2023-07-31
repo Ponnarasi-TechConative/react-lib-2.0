@@ -86,7 +86,6 @@ class Info extends React.Component {
     const externalDocsDescription =
       externalDocs && externalDocs.get("description")
 
-    const Markdown = getComponent("Markdown", true)
     const Link = getComponent("Link")
     const InfoUrl = getComponent("InfoUrl")
     const InfoBasePath = getComponent("InfoBasePath")
@@ -104,9 +103,7 @@ class Info extends React.Component {
           {url && <InfoUrl getComponent={getComponent} url={url} />}
         </hgroup>
 
-        <div className="description">
-          <Markdown source={description} />
-        </div>
+    
 
         {termsOfServiceUrl && (
           <div className="info__tos">

@@ -6,7 +6,6 @@ class OperationLink extends Component {
   render() {
     const { link, name, getComponent } = this.props
 
-    const Markdown = getComponent("Markdown", true)
 
     let targetOp = link.get("operationId") || link.get("operationRef")
     let parameters = link.get("parameters") && link.get("parameters").toJS()
@@ -15,7 +14,6 @@ class OperationLink extends Component {
     return <div className="operation-link">
       <div className="description">
         <b><code>{name}</code></b>
-        { description ? <Markdown source={description}></Markdown> : null }
       </div>
       <pre>
         Operation `{targetOp}`<br /><br />

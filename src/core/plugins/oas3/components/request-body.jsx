@@ -68,7 +68,6 @@ const RequestBody = ({
     return options
   }
 
-  const Markdown = getComponent("Markdown", true)
   const ModelExample = getComponent("modelExample")
   const RequestBodyEditor = getComponent("RequestBodyEditor")
   const HighlightCode = getComponent("highlightCode")
@@ -144,9 +143,7 @@ const RequestBody = ({
     requestBodyValue = Map.isMap(requestBodyValue) ? requestBodyValue : OrderedMap()
 
     return <div className="table-container">
-      { requestBodyDescription &&
-        <Markdown source={requestBodyDescription} />
-      }
+     
       <table>
         <tbody>
           {
@@ -205,7 +202,6 @@ const RequestBody = ({
                 </div>
               </td>
               <td className="parameters-col_description">
-                <Markdown source={ description }></Markdown>
                 {isExecute ? <div>
                   <JsonSchemaForm
                     fn={fn}
@@ -251,9 +247,7 @@ const RequestBody = ({
   }
 
   return <div>
-    { requestBodyDescription &&
-      <Markdown source={requestBodyDescription} />
-    }
+   
     {
       sampleForMediaType ? (
         <ExamplesSelectValueRetainer

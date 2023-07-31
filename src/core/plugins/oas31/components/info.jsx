@@ -20,7 +20,6 @@ const Info = ({ getComponent, specSelectors }) => {
   const contact = specSelectors.contact()
   const license = specSelectors.license()
 
-  const Markdown = getComponent("Markdown", true)
   const Link = getComponent("Link")
   const InfoUrl = getComponent("InfoUrl")
   const InfoBasePath = getComponent("InfoBasePath")
@@ -40,9 +39,6 @@ const Info = ({ getComponent, specSelectors }) => {
 
       {summary && <p className="info__summary">{summary}</p>}
 
-      <div className="info__description description">
-        <Markdown source={description} />
-      </div>
 
       {termsOfServiceUrl && (
         <div className="info__tos">
