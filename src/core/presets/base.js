@@ -12,7 +12,6 @@ import swaggerJs from "core/plugins/swagger-js"
 import util from "core/plugins/util"
 import downloadUrlPlugin from "core/plugins/download-url"
 import configsPlugin from "core/plugins/configs"
-import onComplete from "core/plugins/on-complete"
 import safeRender from "core/plugins/safe-render"
 import App from "core/components/app"
 import Headers from "core/components/headers"
@@ -57,7 +56,6 @@ export default function () {
     swaggerJs,
     jsonSchemaComponents,
     downloadUrlPlugin,
-    onComplete,
     requestSnippets,
     safeRender(),
   ]
