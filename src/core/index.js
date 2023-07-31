@@ -172,7 +172,6 @@ export default function SwaggerUI(opts) {
     }
 
     store.setConfigs(mergedConfig)
-    system.configsActions.loaded()
 
     if (fetchedConfig !== null) {
       if (!queryConfig.url && typeof mergedConfig.spec === "object" && Object.keys(mergedConfig.spec).length) {

@@ -10,7 +10,6 @@ import logs from "core/plugins/logs"
 import swaggerJs from "core/plugins/swagger-js"
 import util from "core/plugins/util"
 import downloadUrlPlugin from "core/plugins/download-url"
-import configsPlugin from "core/plugins/configs"
 import safeRender from "core/plugins/safe-render"
 import App from "core/components/app"
 import Headers from "core/components/headers"
@@ -39,7 +38,6 @@ export default function () {
 
 
   return [
-    configsPlugin,
     util,
     logs,
     view,
