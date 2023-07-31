@@ -18,8 +18,6 @@ export default class BaseLayout extends React.Component {
     const { errSelectors, specSelectors, getComponent } = this.props
 
     const InfoContainer = getComponent("InfoContainer", true)
-    const Models = getComponent("Models", true)
-    const Webhooks = getComponent("Webhooks", true)
     const Row = getComponent("Row")
     const Col = getComponent("Col")
 
