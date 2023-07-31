@@ -8,9 +8,7 @@ import view from "core/plugins/view"
 import requestSnippets from "core/plugins/request-snippets"
 import logs from "core/plugins/logs"
 import swaggerJs from "core/plugins/swagger-js"
-import util from "core/plugins/util"
 import downloadUrlPlugin from "core/plugins/download-url"
-import safeRender from "core/plugins/safe-render"
 import App from "core/components/app"
 import Headers from "core/components/headers"
 import Info, { InfoUrl, InfoBasePath } from "core/components/info"
@@ -38,7 +36,6 @@ export default function () {
 
 
   return [
-    util,
     logs,
     view,
     spec,
@@ -49,6 +46,5 @@ export default function () {
     swaggerJs,
     downloadUrlPlugin,
     requestSnippets,
-    safeRender(),
   ]
 }
