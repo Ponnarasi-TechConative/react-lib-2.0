@@ -26,23 +26,11 @@ import AuthItem from "core/components/auth/auth-item"
 import AuthError from "core/components/auth/error"
 import ApiKeyAuth from "core/components/auth/api-key-auth"
 import BasicAuth from "core/components/auth/basic-auth"
-import Example from "core/components/example"
-import ExamplesSelect from "core/components/examples-select"
-import ExamplesSelectValueRetainer from "core/components/examples-select-value-retainer"
 import Oauth2 from "core/components/auth/oauth2"
-import LiveResponse from "core/components/live-response"
-import HighlightCode from "core/components/highlight-code"
-import Execute from "core/components/execute"
 import Headers from "core/components/headers"
-import ContentType from "core/components/content-type"
-import InitializedInput from "core/components/initialized-input"
 import Info, { InfoUrl, InfoBasePath } from "core/components/info"
 import InfoContainer from "core/containers/info"
 import License from "core/components/license"
-import JumpToPath from "core/components/jump-to-path"
-import Footer from "core/components/footer"
-import Curl from "core/components/curl"
-import DeepLink from "core/components/deep-link"
 import BaseLayout from "core/components/layouts/base"
 import * as LayoutUtils from "core/components/layout-utils"
 import * as JsonSchemaComponents from "core/json-schema-components"
@@ -60,25 +48,13 @@ export default function () {
       oauth2: Oauth2,
       apiKeyAuth: ApiKeyAuth,
       basicAuth: BasicAuth,
-      liveResponse: LiveResponse,
-      InitializedInput,
       info: Info,
       InfoContainer,
       InfoUrl,
       InfoBasePath,
       License,
-      JumpToPath,
-      highlightCode: HighlightCode,
-      execute: Execute,
       headers: Headers,
-      contentType: ContentType,
-      footer: Footer,
-      curl: Curl,
       BaseLayout,
-      DeepLink,
-      Example,
-      ExamplesSelect,
-      ExamplesSelectValueRetainer,
     },
   }
 

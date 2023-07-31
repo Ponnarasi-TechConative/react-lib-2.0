@@ -2,11 +2,9 @@
  * @prettier
  */
 import Webhooks from "./components/webhooks"
-import License from "./components/license"
 import Contact from "./components/contact"
 import Info from "./components/info"
 import JsonSchemaDialect from "./components/json-schema-dialect"
-import LicenseWrapper from "./wrap-components/license"
 import ContactWrapper from "./wrap-components/contact"
 import InfoWrapper from "./wrap-components/info"
 import {
@@ -69,7 +67,6 @@ const OAS31Plugin = ({ fn }) => {
       Webhooks,
       JsonSchemaDialect,
       OAS31Info: Info,
-      OAS31License: License,
       OAS31Contact: Contact,
       JSONSchema202012KeywordExample,
       JSONSchema202012KeywordXml,
@@ -78,7 +75,6 @@ const OAS31Plugin = ({ fn }) => {
     },
     wrapComponents: {
       InfoContainer: InfoWrapper,
-      License: LicenseWrapper,
       Contact: ContactWrapper,
       JSONSchema202012KeywordDescription:
         JSONSchema202012KeywordDescriptionWrapper,
