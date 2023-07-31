@@ -23,7 +23,6 @@ export default class BaseLayout extends React.Component {
     const Row = getComponent("Row")
     const Col = getComponent("Col")
 
-    const isOAS31 = specSelectors.isOAS31()
 
     const isSpecEmpty = !specSelectors.specStr()
 
@@ -89,7 +88,7 @@ export default class BaseLayout extends React.Component {
           <Row className="information-container">
             <Col mobile={12}>
               <InfoContainer />
-              ponnarasi,kkkkkkkk
+              AAAAAAAAAAAA
             </Col>
           </Row>
       </div>
