@@ -8,17 +8,10 @@ const safeRenderPlugin = ({componentList = [], fullOverride = false} = {}) => ({
   const defaultComponentList = [
     "App",
     "BaseLayout",
-    "VersionPragmaFilter",
     "InfoContainer",
-    "ServersContainer",
-    "SchemesContainer",
-    "AuthorizeBtnContainer",
-    "FilterContainer",
-    "Operations",
     "OperationContainer",
     "parameters",
     "responses",
-    "OperationServers",
     "Models",
     "ModelWrapper",
   ]

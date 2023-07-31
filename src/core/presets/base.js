@@ -23,7 +23,6 @@ import OperationContainer from "core/containers/OperationContainer"
 import App from "core/components/app"
 import AuthorizationPopup from "core/components/auth/authorization-popup"
 import AuthorizeBtn from "core/components/auth/authorize-btn"
-import AuthorizeBtnContainer from "core/containers/authorize-btn"
 import AuthorizeOperationBtn from "core/components/auth/authorize-operation-btn"
 import Auths from "core/components/auth/auths"
 import AuthItem from "core/components/auth/auth-item"
@@ -56,7 +55,6 @@ import ParameterIncludeEmpty from "core/components/parameter-include-empty"
 import ParameterRow from "core/components/parameter-row"
 import Execute from "core/components/execute"
 import Headers from "core/components/headers"
-import Errors from "core/components/errors"
 import ContentType from "core/components/content-type"
 import Overview from "core/components/overview"
 import InitializedInput from "core/components/initialized-input"
@@ -67,11 +65,9 @@ import License from "core/components/license"
 import JumpToPath from "core/components/jump-to-path"
 import CopyToClipboardBtn from "core/components/copy-to-clipboard-btn"
 import Footer from "core/components/footer"
-import FilterContainer from "core/containers/filter"
 import ParamBody from "core/components/param-body"
 import Curl from "core/components/curl"
 import Schemes from "core/components/schemes"
-import SchemesContainer from "core/containers/schemes"
 import ModelCollapse from "core/components/model-collapse"
 import ModelExample from "core/components/model-example"
 import ModelWrapper from "core/components/model-wrapper"
@@ -83,10 +79,8 @@ import ArrayModel from "core/components/array-model"
 import PrimitiveModel from "core/components/primitive-model"
 import Property from "core/components/property"
 import TryItOutButton from "core/components/try-it-out-button"
-import VersionPragmaFilter from "core/components/version-pragma-filter"
 import VersionStamp from "core/components/version-stamp"
 import DeepLink from "core/components/deep-link"
-import SvgAssets from "core/components/svg-assets"
 import Markdown from "core/components/providers/markdown"
 import BaseLayout from "core/components/layouts/base"
 import * as LayoutUtils from "core/components/layout-utils"
@@ -98,7 +92,6 @@ export default function () {
       App,
       authorizationPopup: AuthorizationPopup,
       authorizeBtn: AuthorizeBtn,
-      AuthorizeBtnContainer,
       authorizeOperationBtn: AuthorizeOperationBtn,
       auths: Auths,
       AuthItem: AuthItem,
@@ -132,15 +125,12 @@ export default function () {
       parameterRow: ParameterRow,
       execute: Execute,
       headers: Headers,
-      errors: Errors,
       contentType: ContentType,
       overview: Overview,
       footer: Footer,
-      FilterContainer,
       ParamBody: ParamBody,
       curl: Curl,
       schemes: Schemes,
-      SchemesContainer,
       modelExample: ModelExample,
       ModelWrapper,
       ModelCollapse,
@@ -154,7 +144,6 @@ export default function () {
       TryItOutButton,
       Markdown,
       BaseLayout,
-      VersionPragmaFilter,
       VersionStamp,
       OperationExt,
       OperationExtRow,
@@ -163,7 +152,6 @@ export default function () {
       OperationTag,
       OperationContainer,
       DeepLink,
-      SvgAssets,
       Example,
       ExamplesSelect,
       ExamplesSelectValueRetainer,

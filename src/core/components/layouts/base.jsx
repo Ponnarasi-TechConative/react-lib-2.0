@@ -17,22 +17,12 @@ export default class BaseLayout extends React.Component {
   render() {
     const { errSelectors, specSelectors, getComponent } = this.props
 
-    const SvgAssets = getComponent("SvgAssets")
     const InfoContainer = getComponent("InfoContainer", true)
-    const VersionPragmaFilter = getComponent("VersionPragmaFilter")
-    const Operations = getComponent("operations", true)
     const Models = getComponent("Models", true)
     const Webhooks = getComponent("Webhooks", true)
     const Row = getComponent("Row")
     const Col = getComponent("Col")
-    const Errors = getComponent("errors", true)
 
-    const ServersContainer = getComponent("ServersContainer", true)
-    const SchemesContainer = getComponent("SchemesContainer", true)
-    const AuthorizeBtnContainer = getComponent("AuthorizeBtnContainer", true)
-    const FilterContainer = getComponent("FilterContainer", true)
-    const isSwagger2 = specSelectors.isSwagger2()
-    const isOAS3 = specSelectors.isOAS3()
     const isOAS31 = specSelectors.isOAS31()
 
     const isSpecEmpty = !specSelectors.specStr()
@@ -56,7 +46,6 @@ export default class BaseLayout extends React.Component {
         <div className="info">
           <div className="loading-container">
             <h4 className="title">Failed to load API definition.</h4>
-            <Errors />
           </div>
         </div>
       )
@@ -96,51 +85,12 @@ export default class BaseLayout extends React.Component {
 
     return (
       <div className="swagger-ui">
-        <SvgAssets />
-        <VersionPragmaFilter
-          isSwagger2={isSwagger2}
-          isOAS3={isOAS3}
-          alsoShow={<Errors />}
-        >
-          <Errors />
+    
           <Row className="information-container">
             <Col mobile={12}>
               <InfoContainer />
             </Col>
           </Row>
-
-          {hasServers || hasSchemes || hasSecurityDefinitions ? (
-            <div className="scheme-container">
-              <Col className="schemes wrapper" mobile={12}>
-                {hasServers ? <ServersContainer /> : null}
-                {hasSchemes ? <SchemesContainer /> : null}
-                {hasSecurityDefinitions ? <AuthorizeBtnContainer /> : null}
-              </Col>
-            </div>
-          ) : null}
-
-          <FilterContainer />
-
-          <Row>
-            <Col mobile={12} desktop={12}>
-              <Operations />
-            </Col>
-          </Row>
-
-          {isOAS31 && (
-            <Row className="webhooks-container">
-              <Col mobile={12} desktop={12}>
-                <Webhooks />
-              </Col>
-            </Row>
-          )}
-
-          <Row>
-            <Col mobile={12} desktop={12}>
-              <Models />
-            </Col>
-          </Row>
-        </VersionPragmaFilter>
       </div>
     )
   }
