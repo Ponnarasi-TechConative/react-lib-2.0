@@ -89,7 +89,6 @@ class Info extends React.Component {
     const Link = getComponent("Link")
     const InfoUrl = getComponent("InfoUrl")
     const InfoBasePath = getComponent("InfoBasePath")
-    const License = getComponent("License")
 
     return (
       <div className="info">
@@ -114,14 +113,7 @@ class Info extends React.Component {
         )}
 
        
-        {licenseData?.size > 0 && (
-          <License
-            getComponent={getComponent}
-            license={licenseData}
-            selectedServer={selectedServer}
-            url={url}
-          />
-        )}
+       
         {externalDocsUrl ? (
           <Link
             className="info__extdocs"

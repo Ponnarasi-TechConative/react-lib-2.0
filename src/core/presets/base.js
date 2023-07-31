@@ -21,7 +21,6 @@ import App from "core/components/app"
 import Headers from "core/components/headers"
 import Info, { InfoUrl, InfoBasePath } from "core/components/info"
 import InfoContainer from "core/containers/info"
-import License from "core/components/license"
 import BaseLayout from "core/components/layouts/base"
 import * as LayoutUtils from "core/components/layout-utils"
 import * as JsonSchemaComponents from "core/json-schema-components"
@@ -34,7 +33,6 @@ export default function () {
       InfoContainer,
       InfoUrl,
       InfoBasePath,
-      License,
       headers: Headers,
       BaseLayout,
     },
