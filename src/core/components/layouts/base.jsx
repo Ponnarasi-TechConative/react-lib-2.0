@@ -89,7 +89,7 @@ export default class BaseLayout extends React.Component {
           <Row className="information-container">
             <Col mobile={12}>
               <InfoContainer />
-              ponnarasi,kavi,k7
+              ponnarasi
             </Col>
           </Row>
       </div>

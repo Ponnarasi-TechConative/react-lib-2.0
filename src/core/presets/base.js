@@ -18,15 +18,6 @@ import filter from "core/plugins/filter"
 import onComplete from "core/plugins/on-complete"
 import safeRender from "core/plugins/safe-render"
 import App from "core/components/app"
-import AuthorizationPopup from "core/components/auth/authorization-popup"
-import AuthorizeBtn from "core/components/auth/authorize-btn"
-import AuthorizeOperationBtn from "core/components/auth/authorize-operation-btn"
-import Auths from "core/components/auth/auths"
-import AuthItem from "core/components/auth/auth-item"
-import AuthError from "core/components/auth/error"
-import ApiKeyAuth from "core/components/auth/api-key-auth"
-import BasicAuth from "core/components/auth/basic-auth"
-import Oauth2 from "core/components/auth/oauth2"
 import Headers from "core/components/headers"
 import Info, { InfoUrl, InfoBasePath } from "core/components/info"
 import InfoContainer from "core/containers/info"
@@ -39,15 +30,6 @@ export default function () {
   let coreComponents = {
     components: {
       App,
-      authorizationPopup: AuthorizationPopup,
-      authorizeBtn: AuthorizeBtn,
-      authorizeOperationBtn: AuthorizeOperationBtn,
-      auths: Auths,
-      AuthItem: AuthItem,
-      authError: AuthError,
-      oauth2: Oauth2,
-      apiKeyAuth: ApiKeyAuth,
-      basicAuth: BasicAuth,
       info: Info,
       InfoContainer,
       InfoUrl,
