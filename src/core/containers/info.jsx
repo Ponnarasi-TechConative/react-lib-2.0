@@ -18,7 +18,6 @@ export default class InfoContainer extends React.Component {
     const basePath = specSelectors.basePath()
     const host = specSelectors.host()
     const externalDocs = specSelectors.externalDocs()
-    const selectedServer = oas3Selectors.selectedServer()
 
     const Info = getComponent("info")
 
@@ -26,7 +25,7 @@ export default class InfoContainer extends React.Component {
       <div>
         {info && info.count() ? (
           <Info info={info} url={url} host={host} basePath={basePath} externalDocs={externalDocs}
-                getComponent={getComponent} selectedServer={selectedServer} />
+                getComponent={getComponent}  />
         ) : null}
       </div>
     )

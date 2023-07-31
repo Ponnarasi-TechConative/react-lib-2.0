@@ -66,7 +66,6 @@ class Info extends React.Component {
       basePath,
       getComponent,
       externalDocs,
-      selectedServer,
       url: specUrl,
     } = this.props
     const version = info.get("version")
@@ -74,15 +73,11 @@ class Info extends React.Component {
     const title = info.get("title")
     const termsOfServiceUrl = safeBuildUrl(
       info.get("termsOfService"),
-      specUrl,
-      { selectedServer }
-    )
+      specUrl    )
     const contactData = info.get("contact")
     const licenseData = info.get("license")
     const rawExternalDocsUrl = externalDocs && externalDocs.get("url")
-    const externalDocsUrl = safeBuildUrl(rawExternalDocsUrl, specUrl, {
-      selectedServer,
-    })
+ 
     const externalDocsDescription =
       externalDocs && externalDocs.get("description")
 
@@ -111,18 +106,8 @@ class Info extends React.Component {
             </Link>
           </div>
         )}
-
        
        
-        {externalDocsUrl ? (
-          <Link
-            className="info__extdocs"
-            target="_blank"
-            href={sanitizeUrl(externalDocsUrl)}
-          >
-            {externalDocsDescription || externalDocsUrl}
-          </Link>
-        ) : null}
       </div>
     )
   }

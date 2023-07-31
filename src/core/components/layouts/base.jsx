@@ -75,10 +75,8 @@ export default class BaseLayout extends React.Component {
       )
     }
 
-    const servers = specSelectors.servers()
     const schemes = specSelectors.schemes()
 
-    const hasServers = servers && servers.size
     const hasSchemes = schemes && schemes.size
     const hasSecurityDefinitions = !!specSelectors.securityDefinitions()
 
@@ -88,7 +86,7 @@ export default class BaseLayout extends React.Component {
           <Row className="information-container">
             <Col mobile={12}>
               <InfoContainer />
-              AAAAAAAAAAAA
+              BBBBBBBBBBBBCCCCCCCCCCCCC
             </Col>
           </Row>
       </div>
