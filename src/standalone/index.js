@@ -18,7 +18,6 @@ export default [
     componentList: [
       "Topbar",
       "StandaloneLayout",
-      "onlineValidatorBadge"
     ]
   })
 ]
