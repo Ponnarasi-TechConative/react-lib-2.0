@@ -86,7 +86,7 @@ export default class BaseLayout extends React.Component {
           <Row className="information-container">
             <Col mobile={12}>
               <InfoContainer />
-              SSSSSSSSSSSSSSSSSSSSSSSSS
+              PPPPPPPPPPPPPPPPPPPPPPPPP
             </Col>
           </Row>
       </div>

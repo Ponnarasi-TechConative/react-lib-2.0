@@ -18,7 +18,6 @@ import Info, { InfoUrl, InfoBasePath } from "core/components/info"
 import InfoContainer from "core/containers/info"
 import BaseLayout from "core/components/layouts/base"
 import * as LayoutUtils from "core/components/layout-utils"
-import * as JsonSchemaComponents from "core/json-schema-components"
 
 export default function () {
   let coreComponents = {
@@ -37,9 +36,7 @@ export default function () {
     components: LayoutUtils,
   }
 
-  let jsonSchemaComponents = {
-    components: JsonSchemaComponents,
-  }
+
 
   return [
     configsPlugin,
@@ -52,7 +49,6 @@ export default function () {
     coreComponents,
     formComponents,
     swaggerJs,
-    jsonSchemaComponents,
     downloadUrlPlugin,
     requestSnippets,
     safeRender(),

@@ -5,7 +5,6 @@ import React from "react"
 import PropTypes from "prop-types"
 import ImPropTypes from "react-immutable-proptypes"
 import { sanitizeUrl } from "core/utils"
-import { safeBuildUrl } from "core/utils/url"
 
 export class InfoBasePath extends React.Component {
   static propTypes = {
@@ -68,18 +67,8 @@ class Info extends React.Component {
       externalDocs,
       url: specUrl,
     } = this.props
-    const version = info.get("version")
-    const description = info.get("description")
     const title = info.get("title")
-    const termsOfServiceUrl = safeBuildUrl(
-      info.get("termsOfService"),
-      specUrl    )
-    const contactData = info.get("contact")
-    const licenseData = info.get("license")
-    const rawExternalDocsUrl = externalDocs && externalDocs.get("url")
  
-    const externalDocsDescription =
-      externalDocs && externalDocs.get("description")
 
     const Link = getComponent("Link")
     const InfoUrl = getComponent("InfoUrl")
@@ -97,16 +86,6 @@ class Info extends React.Component {
           {url && <InfoUrl getComponent={getComponent} url={url} />}
         </hgroup>
 
-    
-
-        {termsOfServiceUrl && (
-          <div className="info__tos">
-            <Link target="_blank" href={sanitizeUrl(termsOfServiceUrl)}>
-              Terms of service
-            </Link>
-          </div>
-        )}
-       
        
       </div>
     )
