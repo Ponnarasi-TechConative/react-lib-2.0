@@ -54,7 +54,7 @@ const devConfig = configBuilder(
         "Access-Control-Allow-Methods": "*",
         "Access-Control-Allow-Headers": "*",
       },
-      port: 4500,
+      port: 4800,
       host: "0.0.0.0",
       hot: true,
       static: {
