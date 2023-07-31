@@ -5,7 +5,6 @@ import err from "core/plugins/err"
 import layout from "core/plugins/layout"
 import spec from "core/plugins/spec"
 import view from "core/plugins/view"
-import samples from "core/plugins/samples"
 import requestSnippets from "core/plugins/request-snippets"
 import logs from "core/plugins/logs"
 import swaggerJs from "core/plugins/swagger-js"
@@ -50,7 +49,6 @@ export default function () {
     spec,
     err,
     layout,
-    samples,
     coreComponents,
     formComponents,
     swaggerJs,
