@@ -21,6 +21,7 @@ export default class BaseLayout extends React.Component {
     const url = specSelectors.url()
     const value = specSelectors.value()
     const objval = specSelectors.objval()
+    console.log(objval)
     return (
       <div className="swagger-ui">
     
@@ -28,7 +29,7 @@ export default class BaseLayout extends React.Component {
             <div>
               {url}
               <p>  {value}</p>
-              Comming 2
+              <p>{objval.name}</p>
             </div>
           </div>
       </div>

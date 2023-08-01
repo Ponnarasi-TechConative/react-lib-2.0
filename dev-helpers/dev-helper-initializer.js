@@ -18,21 +18,10 @@ window.onload = function() {
     plugins: [
       RestImportBundle.plugins.DownloadUrl
     ],
-    // requestSnippetsEnabled: true,
-    layout: "StandaloneLayout"
+    requestSnippetsEnabled: true,
+    layout: "BaseLayout"
   })
 
   window.ui = ui
 
-  // ui.initOAuth({
-  //   clientId: "your-client-id",
-  //   clientSecret: "your-client-secret-if-required",
-  //   realm: "your-realms",
-  //   appName: "your-app-name",
-  //   scopeSeparator: " ",
-  //   scopes: "openid profile email phone address",
-  //   additionalQueryStringParams: {},
-  //   useBasicAuthenticationWithAccessCodeGrant: false,
-  //   usePkceWithAuthorizationCodeGrant: false
-  // })
 }

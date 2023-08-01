@@ -30,7 +30,9 @@ export const value = createSelector(
 
 export const objval = createSelector(
   state,
-  spec => spec.get("objval")
+  spec =>{
+    return spec.get("objval").toJS()
+  }
 )
 
 export const specStr = createSelector(
