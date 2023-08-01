@@ -17,11 +17,6 @@ export default class BaseLayout extends React.Component {
   render() {
     const { specSelectors, getComponent } = this.props
 
-    const Row = getComponent("Row")
-    const Col = getComponent("Col")
-
- 
-
 
     const url = specSelectors.url()
     const value = specSelectors.value()
@@ -29,13 +24,13 @@ export default class BaseLayout extends React.Component {
     return (
       <div className="swagger-ui">
     
-          <Row className="information-container">
-            <Col mobile={12}>
+          <div className="information-container">
+            <div>
               {url}
               <p>  {value}</p>
               Comming
-            </Col>
-          </Row>
+            </div>
+          </div>
       </div>
     )
   }
