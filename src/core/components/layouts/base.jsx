@@ -73,18 +73,17 @@ export default class BaseLayout extends React.Component {
       )
     }
 
-    const schemes = specSelectors.schemes()
-
-    const hasSchemes = schemes && schemes.size
-    const hasSecurityDefinitions = !!specSelectors.securityDefinitions()
-
+    const url = specSelectors.url()
+    const value = specSelectors.value()
+    const objval = specSelectors.objval()
+    console.log(objval)
     return (
       <div className="swagger-ui">
     
           <Row className="information-container">
             <Col mobile={12}>
-              <InfoContainer />
-              Commingggggggggggggggggggg
+              {url}
+              <p>  {value}</p>
             </Col>
           </Row>
       </div>

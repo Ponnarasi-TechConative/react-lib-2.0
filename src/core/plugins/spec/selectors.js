@@ -23,6 +23,16 @@ export const url = createSelector(
   spec => spec.get("url")
 )
 
+export const value = createSelector(
+  state,
+  spec => spec.get("value")
+)
+
+export const objval = createSelector(
+  state,
+  spec => spec.get("objval")
+)
+
 export const specStr = createSelector(
   state,
   spec => spec.get("spec") || ""

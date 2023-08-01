@@ -6,10 +6,11 @@ window.onload = function() {
   const ui = RestImportBundle({
     dom_id: "#rest-import-ui",
     url : 'https://petstore.swagger.io/v2/swagger.json',
-    value:{
+    objval:{
       id:"1",
       "name":'Ponnarasi'
     },
+    value:"dynamic Value",
     presets: [
       RestImportBundle.presets.apis,
       RestImportStandalonePreset

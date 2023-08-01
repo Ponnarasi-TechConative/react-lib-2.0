@@ -25,6 +25,8 @@ export default function SwaggerUI(opts) {
     domNode: null,
     spec: {},
     url: "",
+    value:"",
+    objval:{},
     urls: null,
     layout: "BaseLayout",
     docExpansion: "list",
@@ -129,7 +131,9 @@ export default function SwaggerUI(opts) {
       },
       spec: {
         spec: "",
-        url: constructorConfig.url
+        url: constructorConfig.url,
+        value: constructorConfig.value,
+        objval:constructorConfig.objval
       },
       requestSnippets: constructorConfig.requestSnippets
     }, constructorConfig.initialState)
