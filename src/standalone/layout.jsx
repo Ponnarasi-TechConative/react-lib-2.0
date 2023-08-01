@@ -16,18 +16,11 @@ export default class StandaloneLayout extends React.Component {
   render() {
     const { getComponent } = this.props
     const Container = getComponent("Container")
-    const Row = getComponent("Row")
-    const Col = getComponent("Col")
-    const Topbar = getComponent("Topbar", true)
     const BaseLayout = getComponent("BaseLayout", true)
 
     return (
       <Container className='swagger-ui'>
-        {Topbar ? <Topbar /> : null}
         <BaseLayout />
-        <Row>
-      
-        </Row>
       </Container>
     )
   }
