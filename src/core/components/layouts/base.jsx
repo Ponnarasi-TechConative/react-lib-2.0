@@ -28,7 +28,7 @@ export default class BaseLayout extends React.Component {
             <div>
               {url}
               <p>  {value}</p>
-              Comming
+              Comming 2
             </div>
           </div>
       </div>
