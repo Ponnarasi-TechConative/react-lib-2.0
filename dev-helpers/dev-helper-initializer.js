@@ -5,7 +5,6 @@ window.onload = function() {
   // Build a system
   const ui = RestImportBundle({
     dom_id: "#rest-import-ui",
-    url : 'https://petstore.swagger.io/v2/swagger.json',
     objval:{
       id:"1",
       "name":'Ponnarasi'
