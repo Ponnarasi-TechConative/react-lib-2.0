@@ -15,23 +15,12 @@ export default class StandaloneLayout extends React.Component {
 
   render() {
     const { getComponent } = this.props
-    const Container = getComponent("Container")
-    const Row = getComponent("Row")
-    const Col = getComponent("Col")
-    const Topbar = getComponent("Topbar", true)
     const BaseLayout = getComponent("BaseLayout", true)
-    const OnlineValidatorBadge = getComponent("onlineValidatorBadge", true)
 
     return (
-      <Container className='swagger-ui'>
-        {Topbar ? <Topbar /> : null}
+      <div className='rest-import'>
         <BaseLayout />
-        <Row>
-          <Col>
-            <OnlineValidatorBadge />
-          </Col>
-        </Row>
-      </Container>
+      </div>
     )
   }
 

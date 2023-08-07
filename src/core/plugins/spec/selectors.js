@@ -23,6 +23,18 @@ export const url = createSelector(
   spec => spec.get("url")
 )
 
+export const value = createSelector(
+  state,
+  spec => spec.get("value")
+)
+
+export const objval = createSelector(
+  state,
+  spec =>{
+    return spec.get("objval").toJS()
+  }
+)
+
 export const specStr = createSelector(
   state,
   spec => spec.get("spec") || ""
@@ -276,10 +288,6 @@ export const taggedOperations = (state) => ({ getConfigs }) => {
     })
 }
 
-export const responses = createSelector(
-  state,
-  state => state.get( "responses", Map() )
-)
 
 export const requests = createSelector(
     state,

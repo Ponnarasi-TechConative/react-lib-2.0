@@ -25,6 +25,8 @@ export default function SwaggerUI(opts) {
     domNode: null,
     spec: {},
     url: "",
+    value:"",
+    objval:{},
     urls: null,
     layout: "BaseLayout",
     docExpansion: "list",
@@ -48,25 +50,6 @@ export default function SwaggerUI(opts) {
     showExtensions: false,
     showCommonExtensions: false,
     withCredentials: undefined,
-    requestSnippetsEnabled: false,
-    requestSnippets: {
-      generators: {
-        "curl_bash": {
-          title: "cURL (bash)",
-          syntax: "bash"
-        },
-        "curl_powershell": {
-          title: "cURL (PowerShell)",
-          syntax: "powershell"
-        },
-        "curl_cmd": {
-          title: "cURL (CMD)",
-          syntax: "bash"
-        },
-      },
-      defaultExpanded: true,
-      languages: null, // e.g. only show curl bash = ["curl_bash"]
-    },
     supportedSubmitMethods: [
       "get",
       "put",
@@ -129,9 +112,10 @@ export default function SwaggerUI(opts) {
       },
       spec: {
         spec: "",
-        url: constructorConfig.url
+        url: constructorConfig.url,
+        value: constructorConfig.value,
+        objval:constructorConfig.objval
       },
-      requestSnippets: constructorConfig.requestSnippets
     }, constructorConfig.initialState)
   }
 
@@ -172,7 +156,6 @@ export default function SwaggerUI(opts) {
     }
 
     store.setConfigs(mergedConfig)
-    system.configsActions.loaded()
 
     if (fetchedConfig !== null) {
       if (!queryConfig.url && typeof mergedConfig.spec === "object" && Object.keys(mergedConfig.spec).length) {

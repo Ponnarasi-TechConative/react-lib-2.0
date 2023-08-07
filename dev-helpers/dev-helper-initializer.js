@@ -5,11 +5,11 @@ window.onload = function() {
   // Build a system
   const ui = RestImportBundle({
     dom_id: "#rest-import-ui",
-    url : 'https://petstore.swagger.io/v2/swagger.json',
-    value:{
+    objval:{
       id:"1",
-      "name":'Ponnarasi'
+      "name":'From library'
     },
+    value:"Save",
     presets: [
       RestImportBundle.presets.apis,
       RestImportStandalonePreset
@@ -17,21 +17,9 @@ window.onload = function() {
     plugins: [
       RestImportBundle.plugins.DownloadUrl
     ],
-    // requestSnippetsEnabled: true,
-    layout: "StandaloneLayout"
+    layout: "BaseLayout"
   })
 
   window.ui = ui
 
-  // ui.initOAuth({
-  //   clientId: "your-client-id",
-  //   clientSecret: "your-client-secret-if-required",
-  //   realm: "your-realms",
-  //   appName: "your-app-name",
-  //   scopeSeparator: " ",
-  //   scopes: "openid profile email phone address",
-  //   additionalQueryStringParams: {},
-  //   useBasicAuthenticationWithAccessCodeGrant: false,
-  //   usePkceWithAuthorizationCodeGrant: false
-  // })
 }
