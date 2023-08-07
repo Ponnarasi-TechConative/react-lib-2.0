@@ -7,9 +7,9 @@ window.onload = function() {
     dom_id: "#rest-import-ui",
     objval:{
       id:"1",
-      "name":'Ponnarasi'
+      "name":'From library'
     },
-    value:"dynamic Value",
+    value:"Save",
     presets: [
       RestImportBundle.presets.apis,
       RestImportStandalonePreset
@@ -17,7 +17,6 @@ window.onload = function() {
     plugins: [
       RestImportBundle.plugins.DownloadUrl
     ],
-    requestSnippetsEnabled: true,
     layout: "BaseLayout"
   })
 

@@ -21,7 +21,7 @@ export default class BaseLayout extends React.Component {
     const value = specSelectors.value();
     const objval = specSelectors.objval();
     return (
-      <div className="swagger-ui">
+      <div className="rest-import">
         <div className="information-container">
           <div>
             {url}

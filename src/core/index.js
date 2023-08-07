@@ -50,25 +50,6 @@ export default function SwaggerUI(opts) {
     showExtensions: false,
     showCommonExtensions: false,
     withCredentials: undefined,
-    requestSnippetsEnabled: false,
-    requestSnippets: {
-      generators: {
-        "curl_bash": {
-          title: "cURL (bash)",
-          syntax: "bash"
-        },
-        "curl_powershell": {
-          title: "cURL (PowerShell)",
-          syntax: "powershell"
-        },
-        "curl_cmd": {
-          title: "cURL (CMD)",
-          syntax: "bash"
-        },
-      },
-      defaultExpanded: true,
-      languages: null, // e.g. only show curl bash = ["curl_bash"]
-    },
     supportedSubmitMethods: [
       "get",
       "put",
@@ -135,7 +116,6 @@ export default function SwaggerUI(opts) {
         value: constructorConfig.value,
         objval:constructorConfig.objval
       },
-      requestSnippets: constructorConfig.requestSnippets
     }, constructorConfig.initialState)
   }
 
