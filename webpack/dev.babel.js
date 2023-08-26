@@ -26,9 +26,6 @@ const devConfig = configBuilder(
       "rest-import-ui-bundle": [
         "./src/core/index.js",
       ],
-      "rest-import-ui-standalone-preset": [
-        "./src/standalone/index.js",
-      ],
       "rest-import-ui": "./src/style/main.scss",
       vendors: ["react-refresh/runtime"],
     },

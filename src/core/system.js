@@ -34,7 +34,6 @@ export default class Store {
     deepExtend(this, {
       state: {},
       plugins: [],
-      pluginsOptions: {},
       system: {
         configs: {},
         fn: {},

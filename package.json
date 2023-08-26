@@ -46,13 +46,9 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "build:core": "webpack --color --config webpack/core.babel.js",
     "build:bundle": "webpack --color --config webpack/bundle.babel.js",
     "dev": "webpack serve --config webpack/dev.babel.js",
-    "build-stylesheets": "webpack --color --config webpack/stylesheets.babel.js"
+    "build": "webpack --color --config webpack/bundle.babel.js && webpack --color --config webpack/stylesheets.babel.js"
   },
   "eslintConfig": {
     "extends": [

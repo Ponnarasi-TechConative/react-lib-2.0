@@ -17,22 +17,23 @@ export default class BaseLayout extends React.Component {
 
   render() {
     const { specSelectors, getComponent } = this.props;
-    const url = specSelectors.url();
     const value = specSelectors.value();
     const objval = specSelectors.objval();
+    const Home = getComponent('Home')
     return (
       <div className="rest-import">
         <div className="information-container">
           <div>
-            {url}
             <p>{value}</p>
             <p>{objval.name}</p>
+            <p>hello Ponnarasi</p>
           </div>
           <Stack spacing={2} direction="row">
             <Button variant="text">Text</Button>
             <Button variant="contained">{value}</Button>
             <Button variant="outlined">Outlined</Button>
           </Stack>
+          <Home title="today" content="welcome"/>
         </div>
       </div>
     );

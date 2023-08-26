@@ -49,9 +49,6 @@ export function updateResolved(spec) {
   }
 }
 
-export function updateUrl(url) {
-  return {type: UPDATE_URL, payload: url}
-}
 
 export function updateJsonSpec(json) {
   return {type: UPDATE_JSON, payload: json}

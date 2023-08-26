@@ -1,3 +1,3 @@
-import SwaggerUI from "./core"
+import restImport from "./core"
 
-export default SwaggerUI
+export default restImport
